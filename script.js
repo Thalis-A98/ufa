@@ -25,6 +25,7 @@ const atletas = [
   {nome:'Thalis',id:'thalis',count:0},
   {nome:'Vitor',id:'vitor',count:0},
 ]
+const contaVotos = document.getElementById('contVotos')
 
 function rederButtons(){
   const atletasContainer = document.getElementById('container')
@@ -42,14 +43,20 @@ function contadorVotos(idAtleta){
   if (atleta) {
       atleta.count += 1;
       atualizarPlacar(idAtleta)
+      alert("Voto Computado!")
   }
 }
 function atualizarPlacar(idAtleta){
   const atleta = atletas.find(p => p.id === idAtleta);
   const placar = document.querySelectorAll(`div#${idAtleta}`)
+
   placar.forEach(item =>{      
-    item.innerHTML = `<p>${atleta.count}</p>`
+    item.innerHTML = `<p>${atleta.count}</p>`;
   })
+  let sum = atletas.reduce(function(accumulator,object){ 
+    return accumulator + object.count
+  },0); 
+  contaVotos.innerHTML = sum;
 }
 
 function renderPlacar(){
@@ -70,6 +77,7 @@ function zerarVotos(){
   contAltetas.forEach(item => {
     item.classList.remove('visible');
   });
+  contAltetas.innerHTML = 0
 }
 
 rederButtons()
