@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url(./assets/img/Desktop\ -\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+}
+
+header{
+  text-align: center;
+  font-size: 1.75rem;
+}
+.container{
+  display: grid;
+  justify-items: center;
+  gap: 35px;
+  grid-template: auto / 1fr 1fr 1fr 1fr 1fr;
+}
+.atletas{
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 1.25rem;
+  background-color: #000;
+  color: #FFF;
+}
+.contadorVotos{
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+.contadorVotos span{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.contadorVotos span>span{
+  font-size: 1.50rem;
+}
+.contadorVotos button{
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 1.25rem;
+  background-color: #000;
+  color: #FFF;
+}
