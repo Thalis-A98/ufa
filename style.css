@@ -13,6 +13,11 @@ body{
 header{
   text-align: center;
   font-size: 1.75rem;
+  display: flex;
+  justify-content: center;
+}
+header button{
+  position: absolute;
 }
 .container{
   display: grid;
@@ -20,16 +25,36 @@ header{
   gap: 35px;
   grid-template: auto / 1fr 1fr 1fr 1fr 1fr;
 }
-.atletas{
-  width: 200px;
-  height: 50px;
+.containerAtleta{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.atletas{
+  width: 150px;
+  height: 50px;
   font-family: "Montserrat";
   font-size: 1.25rem;
   background-color: #000;
   color: #FFF;
+  border: none;
+}
+.contAltetas{
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  font-size: 1.25rem;
+  background-color: #00039B;
+}
+.not_visible{
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
 }
 .contadorVotos{
   height: 50px;
