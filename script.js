@@ -32,7 +32,7 @@ function rederButtons(){
     `    
      <div class="containerAtleta">
       <button class="atletas" id="${atleta.id}" onclick="contadorVotos('${atleta.id}')">${atleta.nome}</button>
-      <div class="contAltetas " id='${atleta.id}'></div>
+      <div class="contAltetas not_visible " id='${atleta.id}'></div>
     </div>
     `
   ).join('');
@@ -57,6 +57,7 @@ function renderPlacar(){
   const contAltetas = document.querySelectorAll('.contAltetas');    
   // Itera sobre todos os elementos selecionados e adiciona a classe 'visible'
   contAltetas.forEach(item => {
+    item.classList.remove('not_visible')
     item.classList.add('visible');
   });  
 }
