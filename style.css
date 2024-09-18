@@ -61,10 +61,14 @@ header{
   border: none;
 }
 @media screen and (max-width:
-400px){
+660px){
   body{
     height: auto;
-  }
+  } 
+  .container{
+    grid-template: auto / 1fr 1fr;
+    row-gap: 35px;
+   } 
   .atletas{
     width: 100px;
     font-size: 1rem;
