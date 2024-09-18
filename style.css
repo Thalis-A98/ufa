@@ -24,27 +24,6 @@ header{
   row-gap: 20px;
   grid-template: auto / 1fr 1fr 1fr 1fr 1fr;
 }
-@media screen and (max-width:
-1024px) {
-  body{
-    background-position: center;
-    height: 100vh;
-  }
- .container{
-  grid-template: auto / 1fr 1fr 1fr;
-  row-gap: 35px;
- } 
-}
-@media screen and (max-width:
-400px){
-  header{
-    font-size: 1.25rem;
-  }
-  .container{
-    grid-template: auto / 1fr 1fr;
-    row-gap: 20px;
-   }
-}
 
 .containerAtleta{
   display: flex;
@@ -60,20 +39,7 @@ header{
   color: #FFF;
   border: none;
 }
-@media screen and (max-width:
-660px){
-  body{
-    height: auto;
-  } 
-  .container{
-    grid-template: auto / 1fr 1fr;
-    row-gap: 35px;
-   } 
-  .atletas{
-    width: 100px;
-    font-size: 1rem;
-  }
-}
+
 .contAltetas{
   width: 50px;
   height: 50px;
@@ -117,4 +83,41 @@ header{
   font-size: 1rem;
   background-color: #000;
   color: #FFF;
+}
+@media screen and (max-width:
+1024px) {
+  body{
+    background-position: center;
+    height: 100vh;
+  }
+ .container{
+  grid-template: auto / 1fr 1fr 1fr;
+  row-gap: 35px;
+ } 
+}
+
+@media screen and (max-width:
+700px){
+  body{
+    height: auto;
+  } 
+  .container{
+    grid-template: auto / 1fr 1fr;
+    row-gap: 35px;
+   } 
+  .atletas{
+    width: 100px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width:
+400px){
+  header{
+    font-size: 1.25rem;
+  }
+  .container{
+    grid-template: auto / 1fr 1fr;
+    row-gap: 20px;
+   }
 }
