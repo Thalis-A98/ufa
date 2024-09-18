@@ -25,13 +25,14 @@ const atletas = [
   {nome:'Thalis',id:'thalis',count:0},
   {nome:'Vitor',id:'vitor',count:0},
 ]
+
 const contaVotos = document.getElementById('contVotos')
 
 function rederButtons(){
   const atletasContainer = document.getElementById('container')
   atletasContainer.innerHTML = atletas.map(atleta =>
     `    
-     <div class="containerAtleta">
+    <div class="containerAtleta">
       <button class="atletas" id="${atleta.id}" onclick="contadorVotos('${atleta.id}')">${atleta.nome}</button>
       <div class="contAltetas not_visible " id='${atleta.id}'></div>
     </div>
@@ -43,7 +44,8 @@ function contadorVotos(idAtleta){
   if (atleta) {
       atleta.count += 1;
       atualizarPlacar(idAtleta)
-      alert("Voto Computado!")
+      alertify.set('notifier','position', 'bottom-rigth');
+      alertify.success('Voto Computado com Sucesso!!');
   }
 }
 function atualizarPlacar(idAtleta){
@@ -69,15 +71,7 @@ function renderPlacar(){
   });  
 }
 function zerarVotos(){
-  atletas.map(atleta => {
-    return { ...atleta, count: 0 };
-     // Retorna um novo objeto com a pontuação zerada
-  });
-  const contAltetas = document.querySelectorAll('.contAltetas');
-  contAltetas.forEach(item => {
-    item.classList.remove('visible');
-  });
-  contAltetas.innerHTML = 0
+  location.reload()
 }
 
 rederButtons()
